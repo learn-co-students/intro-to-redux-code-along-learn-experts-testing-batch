@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import React, { Component } from 'react';
+import ShoppingList from './ShoppingList';
 import logo from './logo.svg';
 import './App.css';
 
@@ -10,11 +11,7 @@ class App extends Component {
         <div className="App-header">
           <h2>Welcome to React Shopping List</h2>
         </div>
-        <ul className="list-group col-lg-6 col-lg-offset-3">
-          {this.props.shoppingListItems.map((item, i)=>{
-            return <li key={i} className="list-group-item">{item.description}</li>
-          })}
-        </ul>
+        <ShoppingList items = {this.props.shoppingListItems}/>
       </div>
     );
   }
